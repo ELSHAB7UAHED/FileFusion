@@ -25,13 +25,7 @@ jobs:
         pip install pyinstaller
 
     - name: 🛠️ Build EXE with PyInstaller
-      run: |
-        pyinstaller ^
-          --onefile ^
-          --windowed ^
-          --name FileFusionPro ^
-          --icon icon.ico ^
-          FileFusion.py
+      run: pyinstaller --onefile --windowed --name FileFusionPro --icon icon.ico FileFusion.py
 
     - name: 📤 Upload EXE Artifact
       uses: actions/upload-artifact@v4
